@@ -18,6 +18,9 @@
 		A779B4DD17D9E6A400EBF50F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A779B4DC17D9E6A300EBF50F /* Default@2x.png */; };
 		A779B4DF17D9E6A400EBF50F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A779B4DE17D9E6A400EBF50F /* Default-568h@2x.png */; };
 		A779B4E217D9E6A400EBF50F /* MyStore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A779B4E017D9E6A400EBF50F /* MyStore.xcdatamodeld */; };
+		A779B4E917D9E7C200EBF50F /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A779B4E817D9E7C200EBF50F /* Storyboard.storyboard */; };
+		A779B4EC17D9EB4F00EBF50F /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A779B4EB17D9EB4F00EBF50F /* DeviceViewController.m */; };
+		A779B4EF17D9EC2400EBF50F /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A779B4EE17D9EC2400EBF50F /* DeviceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,11 @@
 		A779B4DC17D9E6A300EBF50F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		A779B4DE17D9E6A400EBF50F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		A779B4E117D9E6A400EBF50F /* MyStore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyStore.xcdatamodel; sourceTree = "<group>"; };
+		A779B4E817D9E7C200EBF50F /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		A779B4EA17D9EB4F00EBF50F /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
+		A779B4EB17D9EB4F00EBF50F /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
+		A779B4ED17D9EC2400EBF50F /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
+		A779B4EE17D9EC2400EBF50F /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +92,76 @@
 		A779B4CE17D9E6A300EBF50F /* MyStore */ = {
 			isa = PBXGroup;
 			children = (
-				A779B4D717D9E6A300EBF50F /* AppDelegate.h */,
-				A779B4D817D9E6A300EBF50F /* AppDelegate.m */,
-				A779B4E017D9E6A400EBF50F /* MyStore.xcdatamodeld */,
+				A779B4F517DA013100EBF50F /* CoreDataModel */,
+				A779B4F217DA00F600EBF50F /* ViewControllers */,
+				A779B4F117DA00E800EBF50F /* Storyboards */,
+				A779B4F017DA00D900EBF50F /* AppDelegate */,
 				A779B4CF17D9E6A300EBF50F /* Supporting Files */,
 			);
 			path = MyStore;
 			sourceTree = "<group>";
 		};
 		A779B4CF17D9E6A300EBF50F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4F617DA014C00EBF50F /* System */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A779B4F017DA00D900EBF50F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4D717D9E6A300EBF50F /* AppDelegate.h */,
+				A779B4D817D9E6A300EBF50F /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		A779B4F117DA00E800EBF50F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4E817D9E7C200EBF50F /* Storyboard.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		A779B4F217DA00F600EBF50F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4F417DA011A00EBF50F /* DeviceDetailViewController */,
+				A779B4F317DA010E00EBF50F /* DeviceViewController */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A779B4F317DA010E00EBF50F /* DeviceViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4EA17D9EB4F00EBF50F /* DeviceViewController.h */,
+				A779B4EB17D9EB4F00EBF50F /* DeviceViewController.m */,
+			);
+			name = DeviceViewController;
+			sourceTree = "<group>";
+		};
+		A779B4F417DA011A00EBF50F /* DeviceDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4ED17D9EC2400EBF50F /* DeviceDetailViewController.h */,
+				A779B4EE17D9EC2400EBF50F /* DeviceDetailViewController.m */,
+			);
+			name = DeviceDetailViewController;
+			sourceTree = "<group>";
+		};
+		A779B4F517DA013100EBF50F /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				A779B4E017D9E6A400EBF50F /* MyStore.xcdatamodeld */,
+			);
+			name = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		A779B4F617DA014C00EBF50F /* System */ = {
 			isa = PBXGroup;
 			children = (
 				A779B4D017D9E6A300EBF50F /* MyStore-Info.plist */,
@@ -103,7 +172,7 @@
 				A779B4DC17D9E6A300EBF50F /* Default@2x.png */,
 				A779B4DE17D9E6A400EBF50F /* Default-568h@2x.png */,
 			);
-			name = "Supporting Files";
+			name = System;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +230,7 @@
 				A779B4DB17D9E6A300EBF50F /* Default.png in Resources */,
 				A779B4DD17D9E6A400EBF50F /* Default@2x.png in Resources */,
 				A779B4DF17D9E6A400EBF50F /* Default-568h@2x.png in Resources */,
+				A779B4E917D9E7C200EBF50F /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,6 +244,8 @@
 				A779B4D517D9E6A300EBF50F /* main.m in Sources */,
 				A779B4D917D9E6A300EBF50F /* AppDelegate.m in Sources */,
 				A779B4E217D9E6A400EBF50F /* MyStore.xcdatamodeld in Sources */,
+				A779B4EC17D9EB4F00EBF50F /* DeviceViewController.m in Sources */,
+				A779B4EF17D9EC2400EBF50F /* DeviceDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +360,7 @@
 				A779B4E717D9E6A400EBF50F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
